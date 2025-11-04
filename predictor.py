@@ -32,7 +32,7 @@ def predict_tsunami(magnitude, depth, latitude, longitude, api_key):
 
     result = {
         "prediction": int(prediction),
-        "tsunami_probability": round(probability * 100, 2),
+        "tsunami_probability": float(round(probability * 100, 2)),
         "features": {
             "magnitude": magnitude, "depth": depth, "is_ocean": is_ocean,
             "is_steep_slope": is_steep_slope,
